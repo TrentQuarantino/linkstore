@@ -1,0 +1,27 @@
+def show_all():
+  with duckdb.connect('linko.db') as conn:
+    li = conn.sql("SELECT * FROM links")
+    return li
+ERRORE CONNESSIONE CHIUSA
+
+il problema e' che ritornavi li che non era il tuo dato ma un oggetto che dovevi leggere.
+ tipo li.fetchall() o qualcosa del genere
+
+si ritornava questo <duckdb.duckdb.DuckDBPyConnection object at 0x1070cce70>
+
+se perche' era un "reader" non il dato. quindi quando poi lo usavi 
+lui cercava la connessione ma che era chiusa finita la funzione
+
+#  streamlit run linkstore.py --theme.base dark
+# streamlit config set [theme]
+# https://stackoverflow.com/questions/71722979/how-to-use-a-python-variable-inside-streamlit-markdown
+# import re
+
+#Replace all white-space characters with the digit "9":
+
+#txt = "https://www.youtube.com/watch?v=VEHnHID4vyA"
+#x = re.sub("watch\?v\=", "embed/", txt)
+#print(x)
+
+How to Create and Sync Git and GitHub Repositories  by Deborah Kurata
+https://www.freecodecamp.org/news/create-and-sync-git-and-github-repositories/

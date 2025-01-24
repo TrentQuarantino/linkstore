@@ -63,13 +63,3 @@ sub = st.button("Show")
 if sub:
   du.show_all()
 
-#  streamlit run linkstore.py --theme.base dark
-# streamlit config set [theme]
-# https://stackoverflow.com/questions/71722979/how-to-use-a-python-variable-inside-streamlit-markdown
-# import re
-
-#Replace all white-space characters with the digit "9":
-
-#txt = "https://www.youtube.com/watch?v=VEHnHID4vyA"
-#x = re.sub("watch\?v\=", "embed/", txt)
-#print(x)
