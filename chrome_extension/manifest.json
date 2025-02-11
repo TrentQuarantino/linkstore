@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Data Sender Extension",
+  "version": "1.0",
+  "description": "Sends data to a server.",
+  "action": {
+    "default_icon": {
+      "19": "icon-19.png",
+      "38": "icon-38.png"
+    }
+  },
+  "permissions": [
+    "activeTab", 
+    "storage",    
+    "scripting"   
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+  
+}
