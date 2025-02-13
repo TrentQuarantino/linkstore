@@ -23,9 +23,8 @@ def show_all():
     li = conn.sql("SELECT * FROM links")#.fetchall()
     #li.fetchall()
     print(li.fetchall())
-    lidf = st.dataframe(li, use_container_width=True, hide_index=True)
+    lidf = st.dataframe(li, use_container_width=True, hide_index=True, column_config={"link":st.column_config.LinkColumn()})
     return lidf
   
-# TODO Link Button in dataframe
 # TODO search by title or  author
    
