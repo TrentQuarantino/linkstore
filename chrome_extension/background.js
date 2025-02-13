@@ -1,6 +1,5 @@
 // Example: Listen for browser action click (icon click) - alternative to popup
 chrome.action.onClicked.addListener(tab => {
-  // ... (Code to send data, similar to popup.js, but without the button click listener)
   
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const currentTab = tabs[0];
@@ -11,7 +10,6 @@ chrome.action.onClicked.addListener(tab => {
       //customData: "Some additional information",
     };
     console.log(dataToSend)
-    //alert(JSON.stringify(dataToSend))
     // 2. Send data to the server using Fetch API
     const serverUrl = 'http://localhost:8888/from_chrome'; // Replace with your server URL
 
