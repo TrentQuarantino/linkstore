@@ -2,7 +2,7 @@ from asyncio_simple_http_server import *
 import asyncio
 import json
 
-# the fake db 
+# the fake db 'the database'
 from_ext = "extension.json"
 # ===========================================================
 # Function to read the data from 'the database'
