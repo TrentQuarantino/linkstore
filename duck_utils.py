@@ -27,4 +27,5 @@ def show_all():
     return lidf
   
 # TODO Link Button in dataframe
-# modify creation of db     
+# TODO search by title or  author
+   
