@@ -13,7 +13,7 @@ chrome.action.onClicked.addListener(tab => {
     console.log(dataToSend)
     //alert(JSON.stringify(dataToSend))
     // 2. Send data to the server using Fetch API
-    const serverUrl = 'http://localhost:8888/rebugi'; // Replace with your server URL
+    const serverUrl = 'http://localhost:8888/from_chrome'; // Replace with your server URL
 
     fetch(serverUrl, {
       method: 'POST',

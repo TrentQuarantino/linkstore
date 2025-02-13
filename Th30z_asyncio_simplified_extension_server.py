@@ -2,7 +2,7 @@ from asyncio_simple_http_server import *
 import asyncio
 import json
 
-# the fazul db 
+# the fake db 
 from_ext = "extension.json"
 # ===========================================================
 # Function to read the data from 'the database'
@@ -24,8 +24,8 @@ class DbHandler:
     
 # ===========================================================  
 # Get data from Chrome  
-    @uri_mapping('/rebugi', method='POST')
-    def rebugi(self, body):
+    @uri_mapping('/from_chrome', method='POST')
+    def from_chrome(self, body):
         #print(body)
         #from_ext = body
         write_database(body, from_ext)
@@ -35,8 +35,8 @@ class DbHandler:
         print(data)
 # ============================================================
 # Send data to the App Linkstore
-    @uri_mapping('/rebugi3', method='GET')
-    def rebugi3(self):
+    @uri_mapping('/to_app', method='GET')
+    def to_app(self):
        data = read_database(from_ext)
        #print(data)      
        return data
