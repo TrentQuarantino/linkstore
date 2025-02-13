@@ -2,7 +2,7 @@ import duckdb
 import streamlit as st
 
 DBNAME = 'links.db'
-def create_table(DBNAME):
+def create_table():
   with duckdb.connect(DBNAME) as conn:
     conn.sql('''CREATE TABLE IF NOT EXISTS links(
       data VARCHAR,
@@ -27,4 +27,4 @@ def show_all():
     return lidf
   
 # TODO Link Button in dataframe
-     
+# modify creation of db     
