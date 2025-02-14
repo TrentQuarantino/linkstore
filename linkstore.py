@@ -66,9 +66,25 @@ with col1:
       """.format(ur = uro[-1]),
       unsafe_allow_html=True,
     )
-   
-st.header("Show Links stored")
-sub = st.button("Show")
-if sub:
-  du.show_all()
-
+st.container(height=100, border=False)
+tab1, tab2, tab3= st.tabs(["Show All", "Search", "Update"])
+with tab1:  
+  st.header("Show Links stored")
+  sub = st.button("Show")
+  if sub:
+    du.show_all()
+with tab2:
+  st.header("Search from Links stored by keywords")
+  keywords = st.text_input("Keyword to search")
+  sub = st.button("Search")
+  if sub:
+    du.search_by_keywords(keywords)
+with tab3:
+  st.header("Update Links stored")
+  new_name = st.text_input("Insert new title")
+  link = st.text_input("Insert old title")
+  sub = st.button("Update")
+  if sub:
+    print(new_name, link)
+    du.update_title(new_name, link)
+    
