@@ -10,7 +10,7 @@ def get_data():
 du.create_table()
 
 uro = []
-cat_opt = ["Database", "Streamlit", "Python", "Fluter", "Angular", "English", "Music"]
+cat_opt = ["Database", "Streamlit", "Python", "Flutter", "Angular", "English", "Music"]
 st.set_page_config(layout="wide")
 # headert
 colu1, colu2 = st.columns(2)
@@ -28,7 +28,7 @@ with col1:
     tod_date = oggi.strftime("%c")
     st.write("Today's Links &nbsp;&nbsp; ", tod_date)
     
-    cat = st.selectbox("Choose a Category", cat_opt,  key='category')
+    
     # get the data from browser 
     title, url = get_data()
 
@@ -36,6 +36,7 @@ with col1:
     mod_title = st.text_input('Edit if the title is not correct or imprecise', title)
     if mod_title != title:
       title =  mod_title
+    cat = st.selectbox("Choose a Category", cat_opt,  key='category')
 
     subm = st.form_submit_button('Save Data')
     if subm:
