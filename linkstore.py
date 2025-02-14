@@ -82,7 +82,7 @@ with tab2:
 with tab3:
   st.header("Update Links stored")
   new_name = st.text_input("Insert new title")
-  link = st.text_input("Insert old title")
+  link = st.text_input("Insert link")
   sub = st.button("Update")
   if sub:
     print(new_name, link)
